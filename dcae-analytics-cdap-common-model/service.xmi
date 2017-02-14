@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="service" nsURI="org.openecomp.dcae.controller.core.service" nsPrefix="service">
+  <eAnnotations source="http://www.eclipse.org/emf/2011/Xcore">
+    <details key="ecomp" value="http://openecomp.org"/>
+    <details key="cdap" value="http://openecomp.org/cdap"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="DcaeServiceContainer" abstract="true">
+    <eSuperTypes href="org.openecomp.ncomp.core#//NamedEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instances" upperBound="-1" eType="//DcaeServiceInstance" eOpposite="//DcaeServiceInstance/serviceContainer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DcaeService" abstract="true">
+    <eSuperTypes href="org.openecomp.ncomp.core#//NamedEntity"/>
+    <eOperations name="deploy" unique="false">
+      <eParameters name="instanceName" unique="false">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eParameters>
+      <eParameters name="containerPath" unique="false">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="undeploy" unique="false">
+      <eParameters name="instanceName" unique="false">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="test" unique="false" eType="//HealthTestResponse">
+      <eParameters name="instanceName" unique="false">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="suspend" unique="false">
+      <eParameters name="instanceName" unique="false">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="resume" unique="false">
+      <eParameters name="instanceName" unique="false">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="pushManagerConfiguration" unique="false">
+      <eParameters name="instanceName" unique="false">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="pollManagerConfiguration" unique="false">
+      <eParameters name="instanceName" unique="false">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="managerConfiguration" unique="false">
+      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      <eParameters name="instanceName" unique="false">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="managerOperation" unique="false">
+      <eType xsi:type="ecore:EDataType" href="org.openecomp.ncomp.core#//JsonObject"/>
+      <eParameters name="instanceName" unique="false">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eParameters>
+      <eParameters name="operation" unique="false">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eParameters>
+      <eParameters name="parameters" unique="false">
+        <eType xsi:type="ecore:EDataType" href="org.openecomp.ncomp.core#//JsonObject"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="updateConfigurationFromPolicy" unique="false">
+      <eParameters name="instanceName" unique="false">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="runHealthTests" unique="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DcaeServiceInstance" abstract="true">
+    <eSuperTypes href="org.openecomp.ncomp.core#//NamedEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serviceContainer" eType="//DcaeServiceContainer" eOpposite="//DcaeServiceContainer/instances">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="operational"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="operational"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EEnum" href="org.openecomp.ncomp.core#//DeploymentStatus"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputStreams" upperBound="-1" containment="true" resolveProxies="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="service"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EClass" href="org.openecomp.dcae.controller.core.stream#//DcaeStream"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputStreams" upperBound="-1" containment="true" resolveProxies="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="service"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EClass" href="org.openecomp.dcae.controller.core.stream#//DcaeStream"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastHealthTest" unique="false" transient="true">
+      <eType xsi:type="ecore:EDataType" href="org.openecomp.ncomp.core#//DateMetricAttribute"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="healthTestStatus" unique="false" eType="//HealthTestStatus"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="healthTestMessageCode" unique="false">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DcaeLocation" eSuperTypes="//DcaeServiceContainer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="locationType" unique="false">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="openstackProject">
+      <eType xsi:type="ecore:EClass" href="org.openecomp.ncomp.openstack.location#//OpenStackProject"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DcaeServiceDescriptor">
+    <eSuperTypes href="org.openecomp.ncomp.core#//NamedEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="groupId" unique="false">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="artifact" unique="false">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" unique="false">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HealthTestResponse">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" unique="false" eType="//HealthTestStatus"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="messageCode" unique="false">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DcaePolicyEntity" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="policyName" unique="false">
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs::${path}.policyName"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="policyDescription" unique="false">
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs::${path}.policyDescription"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="policyConfigName" unique="false">
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs::${path}.policyConfigName"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="policyTemplateVersion" unique="false">
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs::${path}.policyTemplateVersion"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="policyVersion" unique="false">
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs::${path}.policyVersion"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="policyPriority" unique="false">
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs::${path}.policyPriority"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="policyScope" unique="false">
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs::${path}.policyScope"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="HealthTestStatus">
+    <eLiterals name="GREEN"/>
+    <eLiterals name="YELLOW"/>
+    <eLiterals name="RED"/>
+  </eClassifiers>
+</ecore:EPackage>

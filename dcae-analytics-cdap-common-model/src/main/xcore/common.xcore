@@ -1,0 +1,168 @@
+
+/*-
+ * ============LICENSE_START==========================================
+ * OPENECOMP - DCAE
+ * ===================================================================
+ * Copyright (c) 2017 AT&T Intellectual Property. All rights reserved.
+ * ===================================================================
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *        http://www.apache.org/licenses/LICENSE-2.0 
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * ============LICENSE_END============================================
+ */
+	
+@GenModel(modelDirectory="/dcae-analytics-cdap-common-model/src/main/xcore-gen")
+package org.openecomp.dcae.analytics.cdap.common
+
+import org.openecomp.dcae.controller.service.cdap.CdapServiceInstanceConfiguration
+import org.openecomp.ncomp.core.NamedEntity
+import org.openecomp.dcae.controller.core.service.DcaePolicyEntity
+
+annotation "http://openecomp.org/cdap" as cdap
+annotation "http://openecomp.org" as ecomp
+annotation "http://openecomp.org/policy" as policy
+
+class TcaConfiguration extends CdapServiceInstanceConfiguration {
+
+    @ecomp(^type="configuration")
+    @cdap(destination="namespace-prefs:cdap-tca:domain")
+	String domain
+
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:subscriberHostName")
+	String subscriberHostName
+	
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:subscriberHostPort")
+	String subscriberHostPort
+	
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:subscriberTopicName")
+	String subscriberTopicName
+	
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:subscriberProtocol")
+	String subscriberProtocol
+	
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:subscriberUserName")
+	String subscriberUserName
+	
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:subscriberUserPassword")
+	String subscriberUserPassword
+	
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:subscriberContentType")
+	String subscriberContentType
+	
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:subscriberConsumerId")
+	String subscriberConsumerId
+	
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:subscriberConsumerGroup")
+	String subscriberConsumerGroup
+	
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:subscriberTimeoutMS")
+	String subscriberTimeoutMS
+	
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:subscriberMessageLimit")
+	String subscriberMessageLimit
+	
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:subscriberPollingInterval")
+	String subscriberPollingInterval
+	
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:publisherHostName")
+	String publisherHostName
+	
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:publisherHostPort")
+	String publisherHostPort
+	
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:publisherTopicName")
+	String publisherTopicName
+	
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:publisherProtocol")
+	String publisherProtocol
+	
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:publisherUserName")
+	String publisherUserName
+	
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:publisherUserPassword")
+	String publisherUserPassword
+	
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:publisherContentType")
+	String publisherContentType
+	
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:publisherMaxBatchSize")
+	String publisherMaxBatchSize
+	
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:publisherMaxRecoveryQueueSize")
+	String publisherMaxRecoveryQueueSize
+	
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:publisherPollingInterval")
+	String publisherPollingInterval
+	
+	contains TcaMetrics[] metricsPerFunctionalRole
+}
+
+@policy(policyTemplate="dcae-microservice",
+	dcaeService="tca")
+@ecomp(^type="configuration")
+class TcaMetrics extends NamedEntity, DcaePolicyEntity {
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:${path}.policy.functionalRole")
+	String functionalRole
+
+	@ecomp(^type="configuration")
+	contains TcaThreshold[] thresholds
+}
+
+@ecomp(^type="configuration")
+class TcaThreshold extends NamedEntity {
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:${path}.policy.closedLoopControlName")
+	String closedLoopControlName
+	
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:${path}.policy.version")
+	String version
+
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:${path}.policy.fieldPath")
+	String fieldPath
+
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:${path}.policy.thresholdValue")
+	Integer thresholdValue
+
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:${path}.policy.direction")
+	String direction
+
+	@ecomp(^type="configuration")
+	@cdap(destination="namespace-prefs:cdap-tca:${path}.policy.severity")
+	String severity
+} 
+

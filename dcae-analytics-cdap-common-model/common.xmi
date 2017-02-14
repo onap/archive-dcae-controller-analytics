@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="common" nsURI="org.openecomp.dcae.analytics.cdap.common" nsPrefix="common">
+  <eAnnotations source="http://www.eclipse.org/emf/2011/Xcore">
+    <details key="cdap" value="http://openecomp.org/cdap"/>
+    <details key="ecomp" value="http://openecomp.org"/>
+    <details key="policy" value="http://openecomp.org/policy"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="TcaConfiguration">
+    <eSuperTypes href="org.openecomp.dcae.controller.service.cdap#//CdapServiceInstanceConfiguration"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="domain" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:domain"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subscriberHostName" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:subscriberHostName"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subscriberHostPort" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:subscriberHostPort"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subscriberTopicName" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:subscriberTopicName"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subscriberProtocol" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:subscriberProtocol"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subscriberUserName" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:subscriberUserName"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subscriberUserPassword" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:subscriberUserPassword"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subscriberContentType" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:subscriberContentType"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subscriberConsumerId" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:subscriberConsumerId"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subscriberConsumerGroup" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:subscriberConsumerGroup"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subscriberTimeoutMS" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:subscriberTimeoutMS"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subscriberMessageLimit" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:subscriberMessageLimit"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subscriberPollingInterval" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:subscriberPollingInterval"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="publisherHostName" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:publisherHostName"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="publisherHostPort" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:publisherHostPort"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="publisherTopicName" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:publisherTopicName"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="publisherProtocol" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:publisherProtocol"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="publisherUserName" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:publisherUserName"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="publisherUserPassword" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:publisherUserPassword"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="publisherContentType" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:publisherContentType"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="publisherMaxBatchSize" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:publisherMaxBatchSize"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="publisherMaxRecoveryQueueSize" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:publisherMaxRecoveryQueueSize"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="publisherPollingInterval" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:publisherPollingInterval"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="metricsPerFunctionalRole" upperBound="-1" eType="//TcaMetrics" containment="true" resolveProxies="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TcaMetrics">
+    <eAnnotations source="http://openecomp.org">
+      <details key="type" value="configuration"/>
+    </eAnnotations>
+    <eAnnotations source="http://openecomp.org/policy">
+      <details key="policyTemplate" value="dcae-microservice"/>
+      <details key="dcaeService" value="tca"/>
+    </eAnnotations>
+    <eSuperTypes href="org.openecomp.ncomp.core#//NamedEntity"/>
+    <eSuperTypes href="org.openecomp.dcae.controller.core.service#//DcaePolicyEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="functionalRole" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:${path}.policy.functionalRole"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="thresholds" upperBound="-1" eType="//TcaThreshold" containment="true" resolveProxies="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TcaThreshold">
+    <eAnnotations source="http://openecomp.org">
+      <details key="type" value="configuration"/>
+    </eAnnotations>
+    <eSuperTypes href="org.openecomp.ncomp.core#//NamedEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="closedLoopControlName" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:${path}.policy.closedLoopControlName"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:${path}.policy.version"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fieldPath" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:${path}.policy.fieldPath"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="thresholdValue" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:${path}.policy.thresholdValue"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:${path}.policy.direction"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="severity" unique="false">
+      <eAnnotations source="http://openecomp.org">
+        <details key="type" value="configuration"/>
+      </eAnnotations>
+      <eAnnotations source="http://openecomp.org/cdap">
+        <details key="destination" value="namespace-prefs:cdap-tca:${path}.policy.severity"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>

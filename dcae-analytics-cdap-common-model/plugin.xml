@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated common -->
+      <package
+            uri="org.openecomp.dcae.analytics.cdap.common"
+            class="org.openecomp.dcae.analytics.cdap.common.CommonPackage"
+            genModel="src/main/xcore/common.xcore"/>
+   </extension>
+
+</plugin>
