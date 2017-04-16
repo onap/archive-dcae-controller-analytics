@@ -36,6 +36,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.openecomp.dcae.analytics.cdap.common.impl.TcaThresholdImpl#getClosedLoopControlName <em>Closed Loop Control Name</em>}</li>
  *   <li>{@link org.openecomp.dcae.analytics.cdap.common.impl.TcaThresholdImpl#getVersion <em>Version</em>}</li>
@@ -44,7 +45,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link org.openecomp.dcae.analytics.cdap.common.impl.TcaThresholdImpl#getDirection <em>Direction</em>}</li>
  *   <li>{@link org.openecomp.dcae.analytics.cdap.common.impl.TcaThresholdImpl#getSeverity <em>Severity</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

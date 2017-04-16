@@ -19,8 +19,8 @@
  * ============LICENSE_END============================================
  */
 	
-@GenModel(modelDirectory="/dcae-analytics-cdap-common-model/src/main/xcore-gen")
-package org.openecomp.dcae.analytics.cdap.common
+@GenModel(modelDirectory="/dcae-analytics-cdap-common-model/src/main/xcore-gen") 
+package org.openecomp.dcae.analytics.cdap.common 
 
 import org.openecomp.dcae.controller.service.cdap.CdapServiceInstanceConfiguration
 import org.openecomp.ncomp.core.NamedEntity

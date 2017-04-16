@@ -597,7 +597,7 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		// http://www.eclipse.org/emf/2011/Xcore
 		createXcoreAnnotations();
 		// http://openecomp.org
-		createEcompAnnotations();
+		createOpenecompAnnotations();
 		// http://openecomp.org/cdap
 		createCdapAnnotations();
 		// http://openecomp.org/policy
@@ -623,202 +623,12 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	}
 
 	/**
-	 * Initializes the annotations for <b>http://openecomp.org/cdap</b>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void createCdapAnnotations() {
-		String source = "http://openecomp.org/cdap";	
-		addAnnotation
-		  (getTcaConfiguration_Domain(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:domain"
-		   });	
-		addAnnotation
-		  (getTcaConfiguration_SubscriberHostName(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:subscriberHostName"
-		   });	
-		addAnnotation
-		  (getTcaConfiguration_SubscriberHostPort(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:subscriberHostPort"
-		   });	
-		addAnnotation
-		  (getTcaConfiguration_SubscriberTopicName(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:subscriberTopicName"
-		   });	
-		addAnnotation
-		  (getTcaConfiguration_SubscriberProtocol(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:subscriberProtocol"
-		   });	
-		addAnnotation
-		  (getTcaConfiguration_SubscriberUserName(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:subscriberUserName"
-		   });	
-		addAnnotation
-		  (getTcaConfiguration_SubscriberUserPassword(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:subscriberUserPassword"
-		   });	
-		addAnnotation
-		  (getTcaConfiguration_SubscriberContentType(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:subscriberContentType"
-		   });	
-		addAnnotation
-		  (getTcaConfiguration_SubscriberConsumerId(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:subscriberConsumerId"
-		   });	
-		addAnnotation
-		  (getTcaConfiguration_SubscriberConsumerGroup(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:subscriberConsumerGroup"
-		   });	
-		addAnnotation
-		  (getTcaConfiguration_SubscriberTimeoutMS(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:subscriberTimeoutMS"
-		   });	
-		addAnnotation
-		  (getTcaConfiguration_SubscriberMessageLimit(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:subscriberMessageLimit"
-		   });	
-		addAnnotation
-		  (getTcaConfiguration_SubscriberPollingInterval(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:subscriberPollingInterval"
-		   });	
-		addAnnotation
-		  (getTcaConfiguration_PublisherHostName(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:publisherHostName"
-		   });	
-		addAnnotation
-		  (getTcaConfiguration_PublisherHostPort(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:publisherHostPort"
-		   });	
-		addAnnotation
-		  (getTcaConfiguration_PublisherTopicName(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:publisherTopicName"
-		   });	
-		addAnnotation
-		  (getTcaConfiguration_PublisherProtocol(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:publisherProtocol"
-		   });	
-		addAnnotation
-		  (getTcaConfiguration_PublisherUserName(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:publisherUserName"
-		   });	
-		addAnnotation
-		  (getTcaConfiguration_PublisherUserPassword(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:publisherUserPassword"
-		   });	
-		addAnnotation
-		  (getTcaConfiguration_PublisherContentType(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:publisherContentType"
-		   });	
-		addAnnotation
-		  (getTcaConfiguration_PublisherMaxBatchSize(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:publisherMaxBatchSize"
-		   });	
-		addAnnotation
-		  (getTcaConfiguration_PublisherMaxRecoveryQueueSize(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:publisherMaxRecoveryQueueSize"
-		   });	
-		addAnnotation
-		  (getTcaConfiguration_PublisherPollingInterval(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:publisherPollingInterval"
-		   });	
-		addAnnotation
-		  (getTcaMetrics_FunctionalRole(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:${path}.policy.functionalRole"
-		   });	
-		addAnnotation
-		  (getTcaThreshold_ClosedLoopControlName(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:${path}.policy.closedLoopControlName"
-		   });	
-		addAnnotation
-		  (getTcaThreshold_Version(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:${path}.policy.version"
-		   });	
-		addAnnotation
-		  (getTcaThreshold_FieldPath(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:${path}.policy.fieldPath"
-		   });	
-		addAnnotation
-		  (getTcaThreshold_ThresholdValue(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:${path}.policy.thresholdValue"
-		   });	
-		addAnnotation
-		  (getTcaThreshold_Direction(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:${path}.policy.direction"
-		   });	
-		addAnnotation
-		  (getTcaThreshold_Severity(), 
-		   source, 
-		   new String[] {
-			 "destination", "namespace-prefs:cdap-tca:${path}.policy.severity"
-		   });
-	}
-
-	/**
 	 * Initializes the annotations for <b>http://openecomp.org</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void createEcompAnnotations() {
+	protected void createOpenecompAnnotations() {
 		String source = "http://openecomp.org";	
 		addAnnotation
 		  (getTcaConfiguration_Domain(), 
@@ -1017,6 +827,196 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		   source, 
 		   new String[] {
 			 "type", "configuration"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://openecomp.org/cdap</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createCdapAnnotations() {
+		String source = "http://openecomp.org/cdap";	
+		addAnnotation
+		  (getTcaConfiguration_Domain(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:domain"
+		   });	
+		addAnnotation
+		  (getTcaConfiguration_SubscriberHostName(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:subscriberHostName"
+		   });	
+		addAnnotation
+		  (getTcaConfiguration_SubscriberHostPort(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:subscriberHostPort"
+		   });	
+		addAnnotation
+		  (getTcaConfiguration_SubscriberTopicName(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:subscriberTopicName"
+		   });	
+		addAnnotation
+		  (getTcaConfiguration_SubscriberProtocol(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:subscriberProtocol"
+		   });	
+		addAnnotation
+		  (getTcaConfiguration_SubscriberUserName(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:subscriberUserName"
+		   });	
+		addAnnotation
+		  (getTcaConfiguration_SubscriberUserPassword(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:subscriberUserPassword"
+		   });	
+		addAnnotation
+		  (getTcaConfiguration_SubscriberContentType(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:subscriberContentType"
+		   });	
+		addAnnotation
+		  (getTcaConfiguration_SubscriberConsumerId(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:subscriberConsumerId"
+		   });	
+		addAnnotation
+		  (getTcaConfiguration_SubscriberConsumerGroup(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:subscriberConsumerGroup"
+		   });	
+		addAnnotation
+		  (getTcaConfiguration_SubscriberTimeoutMS(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:subscriberTimeoutMS"
+		   });	
+		addAnnotation
+		  (getTcaConfiguration_SubscriberMessageLimit(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:subscriberMessageLimit"
+		   });	
+		addAnnotation
+		  (getTcaConfiguration_SubscriberPollingInterval(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:subscriberPollingInterval"
+		   });	
+		addAnnotation
+		  (getTcaConfiguration_PublisherHostName(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:publisherHostName"
+		   });	
+		addAnnotation
+		  (getTcaConfiguration_PublisherHostPort(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:publisherHostPort"
+		   });	
+		addAnnotation
+		  (getTcaConfiguration_PublisherTopicName(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:publisherTopicName"
+		   });	
+		addAnnotation
+		  (getTcaConfiguration_PublisherProtocol(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:publisherProtocol"
+		   });	
+		addAnnotation
+		  (getTcaConfiguration_PublisherUserName(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:publisherUserName"
+		   });	
+		addAnnotation
+		  (getTcaConfiguration_PublisherUserPassword(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:publisherUserPassword"
+		   });	
+		addAnnotation
+		  (getTcaConfiguration_PublisherContentType(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:publisherContentType"
+		   });	
+		addAnnotation
+		  (getTcaConfiguration_PublisherMaxBatchSize(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:publisherMaxBatchSize"
+		   });	
+		addAnnotation
+		  (getTcaConfiguration_PublisherMaxRecoveryQueueSize(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:publisherMaxRecoveryQueueSize"
+		   });	
+		addAnnotation
+		  (getTcaConfiguration_PublisherPollingInterval(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:publisherPollingInterval"
+		   });	
+		addAnnotation
+		  (getTcaMetrics_FunctionalRole(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:${path}.policy.functionalRole"
+		   });	
+		addAnnotation
+		  (getTcaThreshold_ClosedLoopControlName(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:${path}.policy.closedLoopControlName"
+		   });	
+		addAnnotation
+		  (getTcaThreshold_Version(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:${path}.policy.version"
+		   });	
+		addAnnotation
+		  (getTcaThreshold_FieldPath(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:${path}.policy.fieldPath"
+		   });	
+		addAnnotation
+		  (getTcaThreshold_ThresholdValue(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:${path}.policy.thresholdValue"
+		   });	
+		addAnnotation
+		  (getTcaThreshold_Direction(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:${path}.policy.direction"
+		   });	
+		addAnnotation
+		  (getTcaThreshold_Severity(), 
+		   source, 
+		   new String[] {
+			 "destination", "namespace-prefs:cdap-tca:${path}.policy.severity"
 		   });
 	}
 

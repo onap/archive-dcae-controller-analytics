@@ -32,6 +32,7 @@ import org.openecomp.ncomp.core.NamedEntity;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.openecomp.dcae.analytics.cdap.common.TcaThreshold#getClosedLoopControlName <em>Closed Loop Control Name</em>}</li>
  *   <li>{@link org.openecomp.dcae.analytics.cdap.common.TcaThreshold#getVersion <em>Version</em>}</li>
@@ -40,7 +41,6 @@ import org.openecomp.ncomp.core.NamedEntity;
  *   <li>{@link org.openecomp.dcae.analytics.cdap.common.TcaThreshold#getDirection <em>Direction</em>}</li>
  *   <li>{@link org.openecomp.dcae.analytics.cdap.common.TcaThreshold#getSeverity <em>Severity</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.openecomp.dcae.analytics.cdap.common.CommonPackage#getTcaThreshold()
  * @model annotation="http://openecomp.org type='configuration'"

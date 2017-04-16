@@ -34,6 +34,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.openecomp.dcae.analytics.cdap.common.TcaConfiguration#getDomain <em>Domain</em>}</li>
  *   <li>{@link org.openecomp.dcae.analytics.cdap.common.TcaConfiguration#getSubscriberHostName <em>Subscriber Host Name</em>}</li>
@@ -60,7 +61,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.openecomp.dcae.analytics.cdap.common.TcaConfiguration#getPublisherPollingInterval <em>Publisher Polling Interval</em>}</li>
  *   <li>{@link org.openecomp.dcae.analytics.cdap.common.TcaConfiguration#getMetricsPerFunctionalRole <em>Metrics Per Functional Role</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.openecomp.dcae.analytics.cdap.common.CommonPackage#getTcaConfiguration()
  * @model

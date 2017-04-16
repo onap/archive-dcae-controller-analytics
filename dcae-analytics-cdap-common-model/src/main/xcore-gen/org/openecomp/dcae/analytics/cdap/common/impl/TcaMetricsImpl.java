@@ -45,6 +45,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.openecomp.dcae.analytics.cdap.common.impl.TcaMetricsImpl#getPolicyName <em>Policy Name</em>}</li>
  *   <li>{@link org.openecomp.dcae.analytics.cdap.common.impl.TcaMetricsImpl#getPolicyDescription <em>Policy Description</em>}</li>
@@ -56,7 +57,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link org.openecomp.dcae.analytics.cdap.common.impl.TcaMetricsImpl#getFunctionalRole <em>Functional Role</em>}</li>
  *   <li>{@link org.openecomp.dcae.analytics.cdap.common.impl.TcaMetricsImpl#getThresholds <em>Thresholds</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

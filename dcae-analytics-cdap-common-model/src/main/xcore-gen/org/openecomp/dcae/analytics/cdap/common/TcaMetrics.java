@@ -35,11 +35,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.openecomp.dcae.analytics.cdap.common.TcaMetrics#getFunctionalRole <em>Functional Role</em>}</li>
  *   <li>{@link org.openecomp.dcae.analytics.cdap.common.TcaMetrics#getThresholds <em>Thresholds</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.openecomp.dcae.analytics.cdap.common.CommonPackage#getTcaMetrics()
  * @model annotation="http://openecomp.org/policy policyTemplate='dcae-microservice' dcaeService='tca'"

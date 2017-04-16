@@ -50,6 +50,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.openecomp.dcae.analytics.cdap.common.impl.TcaConfigurationImpl#getDomain <em>Domain</em>}</li>
  *   <li>{@link org.openecomp.dcae.analytics.cdap.common.impl.TcaConfigurationImpl#getSubscriberHostName <em>Subscriber Host Name</em>}</li>
@@ -76,7 +77,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link org.openecomp.dcae.analytics.cdap.common.impl.TcaConfigurationImpl#getPublisherPollingInterval <em>Publisher Polling Interval</em>}</li>
  *   <li>{@link org.openecomp.dcae.analytics.cdap.common.impl.TcaConfigurationImpl#getMetricsPerFunctionalRole <em>Metrics Per Functional Role</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
